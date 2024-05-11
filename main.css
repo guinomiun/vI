@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F2F2F2;
+}
+
+.cabecalho {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.linkTopo {
+    background-color: #A61717;
+    color: #F2F2F2;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+.linkTopo:hover {
+    background-color: #585F73;
+}
+
+.linkTopo:active {
+    background-color: #2D3359;
+}
+
+.conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Quando a tela for pequena (no celular), ele vai colocar o conteúdo em uma única coluna*/
+.conteudo > div {
+    padding: 1rem;
+    width: 100%;
+}
+
+/* Isso aqui é pra colocar o conteúdo lado a lado quando a tela for grande (no PC, por exemplo)*/
+@media screen and (min-width: 768px) {
+    .conteudo > div {
+        padding: 1rem 2rem;
+        width: 50%;
+    }        
+}
+
+.titulo {
+    font-family: sans-serif;
+    color: #585F73;
+}
+
+.texto {
+    font-family: sans-serif;
+    text-align: justify;
+    color: #2D3359;
+}
+
+.inputBox{
+    position: relative;
+}
+
+legend{
+    border: 1px solid #D98977;
+    padding: 10px;
+    text-align: center;
+    background-color: #D98977;
+    border-radius: 8px;
+}
+
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid #2D3359;
+    outline: none;
+    color: #2D3359;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+
+.labelInputFloat {
+    font-family: sans-serif;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.labelInput {
+    font-family: sans-serif;
+}
+
+.inputUser:focus ~ .labelInputFloat,
+.inputUser:valid ~ .labelInputFloat{
+    top: -20px;
+    font-size: 12px;
+    color: #A61717;
+}
+#data_nascimento{
+    font-family: sans-serif;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+.botao {
+    background-color: #A61717;
+    color: #F2F2F2;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-family: sans-serif;
+    border: none;
+}
+
+.botao:hover {
+    background-color: #585F73;
+}
+
+.botao:active {
+    background-color: #2D3359;
+}
+
+.formBotao {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+}
